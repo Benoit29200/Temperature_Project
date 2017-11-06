@@ -46,7 +46,6 @@ public class SuiviAnnuel implements Serializable {
 	}
 
 	public double TemperatureMoyenne(int mois,int jour) {
-		System.out.println("test");
 		return lesMois.get(mois).TemperatureMoyenne(jour);
 	}
 	
