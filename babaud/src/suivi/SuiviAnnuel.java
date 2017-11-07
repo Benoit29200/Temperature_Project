@@ -31,16 +31,6 @@ public class SuiviAnnuel implements Serializable {
 		lesMois.get(mois).AjoutNouvelleMesure(jour, heure, minute, uneTemperature);
 	}
 	
-	public double TemperatureMoyenne() {
-		double i = 0.0;
-		int j = 0;
-		for (SuiviMensuel s : lesMois) {
-			 i+=s.TemperatureMoyenne();
-			 j++;
-		}
-		return (i/j);
-	}
-	
 	public double TemperatureMoyenne(int mois) {
 		return lesMois.get(mois).TemperatureMoyenne();
 	}
@@ -49,10 +39,9 @@ public class SuiviAnnuel implements Serializable {
 		return lesMois.get(mois).TemperatureMoyenne(jour);
 	}
 	
-	public double TemperatureMoyenne(int mois, int jour, int heure) {
+	public double TemperatureMoyenne(int mois,int jour,int heure) {
 		return lesMois.get(mois).TemperatureMoyenne(jour,heure);
 	}
-	
 	/**  READ_OBJECT
 	 *  on surcharge readObject pour forcer à lire les champs de la classe dans le même ordre qu'on les a écrit.
 	 * 
